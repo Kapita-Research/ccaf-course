@@ -5,7 +5,7 @@ with no sign-in, no accounts and no Claude tutor. Each reader's ticks, highlight
 their own browser.
 
 Live at https://ccaf.core.kapitaresearch.com, served by
-nginx on kapita-core through Coolify. Every push to `main` is deployed.
+nginx on kapita-core through Coolify (project `ccaf-course`). After a push to `main`, redeploy the app in Coolify.
 
 `index.html` is `course/learning-path.html` from `Kapita-Research/ccaf-server` (course v2.8),
 unchanged. Opened without the tutor relay, the page keeps its tutor dormant by design. To update the
