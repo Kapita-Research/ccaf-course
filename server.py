@@ -162,6 +162,8 @@ class Handler(BaseHTTPRequestHandler):
     sys_version = ""
 
     def log_message(self, fmt, *args):
+        if self.path.split("?")[0] == "/healthz":  # the container's own probe, not worth a line
+            return
         sys.stdout.write("%s %s\n" % (self.command, self.path.split("?")[0][:60]))
 
     def client_ip(self):
